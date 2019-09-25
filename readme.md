@@ -8,7 +8,7 @@ Ce git est en rapport avec les exercices de cours que j'ai mes camarades et moi.
 
 + Pierre M (AlasDiablo, lIotaMiu)
 + Emilien V (Safyrus)
-+ Aurélien (Aurel-11)
++ Aurélien R (Aurel-11)
 
 ## Terms of use
 
