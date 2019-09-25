@@ -1,6 +1,6 @@
 public class ParcoursZigzag extends Parcours{
 
-    boolean reverse;
+    private boolean reverse;
 
     public ParcoursZigzag(TableauEntier t){
         super(t);
@@ -10,9 +10,17 @@ public class ParcoursZigzag extends Parcours{
     @Override
     public void suivant() {
         nbParcourus++;
-        colonneCour++;
+        if(reverse){
+            colonneCour--;
+        }else {
+            colonneCour++;
+        }
         if(colonneCour >= tab.getLargeur()){
-            colonneCour = 0;
+            if(reverse) {
+                colonneCour = tab.getLargeur() -1;
+            }else {
+                colonneCour = 0;
+            }
             ligneCour++;
             reverse = !reverse;
         }
