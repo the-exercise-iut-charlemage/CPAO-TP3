@@ -26,6 +26,7 @@ public class TableauEntier {
         try {
             return this.t[l][c];
         } catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
             return Integer.MIN_VALUE;
         }
     }

@@ -6,6 +6,12 @@ public class ParcoursLigne extends Parcours {
 
     @Override
     public void suivant() {
-        nbParcourus++;
+        this.nbParcourus++;
+        if (this.colonneCour + 1 >= this.tab.getLargeur()) {
+            this.colonneCour = 0;
+            this.ligneCour++;
+        } else {
+            this.colonneCour++;
+        }
     }
 }
