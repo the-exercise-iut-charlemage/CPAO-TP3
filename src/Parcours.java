@@ -7,6 +7,13 @@ public abstract class Parcours implements Iterator<Integer> {
     protected int colonneCour;
     protected int nbParcourus;
 
+    public Parcours(TableauEntier t){
+        this.tab = t;
+        this.ligneCour = tab.getLargeur();
+        this.colonneCour = tab.getHauteur();
+        this.nbParcourus = 0;
+    }
+
     @Override
     public boolean hasNext() {
         return ligneCour*colonneCour > nbParcourus;
