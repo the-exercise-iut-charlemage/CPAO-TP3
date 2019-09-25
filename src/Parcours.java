@@ -3,9 +3,9 @@ import java.util.Iterator;
 public abstract class Parcours implements Iterator<Integer> {
 
     private TableauEntier tab;
-    private int ligneCour;
-    private int colonneCour;
-    private int nbParcourus;
+    protected int ligneCour;
+    protected int colonneCour;
+    protected int nbParcourus;
 
     @Override
     public boolean hasNext() {
