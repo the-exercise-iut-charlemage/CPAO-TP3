@@ -9,20 +9,21 @@ public class ParcoursZigzag extends Parcours{
 
     @Override
     public void suivant() {
-        nbParcourus++;
-        if(reverse){
-            colonneCour--;
-        }else {
-            colonneCour++;
-        }
-        if(colonneCour >= tab.getLargeur()){
-            if(reverse) {
-                colonneCour = tab.getLargeur() -1;
-            }else {
-                colonneCour = 0;
+        this.nbParcourus++;
+        if (!reverse) {
+            if (this.colonneCour + 1 >= this.tab.getLargeur()) {
+                this.reverse = true;
+                this.ligneCour++;
+            } else {
+                this.colonneCour++;
             }
-            ligneCour++;
-            reverse = !reverse;
+        } else {
+            if (this.colonneCour <= 0) {
+                this.reverse = false;
+                this.ligneCour++;
+            } else {
+                this.colonneCour--;
+            }
         }
     }
 }

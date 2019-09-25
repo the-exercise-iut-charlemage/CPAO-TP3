@@ -54,4 +54,8 @@ public class TableauEntier {
     public Parcours iterateurLigne() {
         return new ParcoursLigne(this);
     }
+
+    public Parcours iterateurZigzag() {
+        return new ParcoursZigzag(this);
+    }
 }
