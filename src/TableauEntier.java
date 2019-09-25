@@ -3,21 +3,26 @@ public class TableauEntier {
     private int[][] t;
 
     public TableauEntier(int[][] t) {
-        // todo
+        this.t = t;
     }
 
     int valeurA(int l, int c) {
-        // todo
-        return -1;
+        try {
+            return this.t[l][c];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return Integer.MIN_VALUE;
+        }
     }
 
     int getLargeur() {
-        // todo
-        return -1;
+        try {
+            return this.t[0].length;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return -1;
+        }
     }
 
     int getHauteur() {
-        // todo
-        return -1;
+        return this.t.length;
     }
 }
