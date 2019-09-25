@@ -22,7 +22,7 @@ public class TableauEntier {
      * @param c position sur le deusieme tableau
      * @return la valeur au position donné, si sortie de tableau alors retour la valeur minimal d'un entier
      */
-    int valeurA(int l, int c) {
+    public int valeurA(int l, int c) {
         try {
             return this.t[l][c];
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -34,7 +34,7 @@ public class TableauEntier {
      * fonction pour openir la taille du deuxeme tableau
      * @return la taille en entier
      */
-    int getLargeur() {
+    public int getLargeur() {
         try {
             return this.t[0].length;
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -46,7 +46,11 @@ public class TableauEntier {
      * fonction pour optenir la taille du premier tableau
      * @return la taille en entier
      */
-    int getHauteur() {
+    public int getHauteur() {
         return this.t.length;
+    }
+
+    public Parcours iterateurLigne() {
+        return new ParcoursLigne(this);
     }
 }
